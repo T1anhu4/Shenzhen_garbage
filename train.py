@@ -1,0 +1,45 @@
+from ultralytics import YOLO
+
+model = YOLO('yolov8l.pt')
+
+model.train(
+    data = '/home/zhy/wth/wth3/YOLODataset/dataset.yaml',
+    epochs = 300,
+    imgsz = (1280, 720),
+    batch = 6,
+    workers = 4,
+    device = 0,
+    optimizer = 'AdamW',
+    lr0 = 0.0003,
+    lrf = 0.15,
+    momentum = 0.937,
+    weight_decay = 0.0005,
+    warmup_epochs = 7.0,
+    patience = 50,
+    warmup_momentum = 0.8,
+    warmup_bias_lr = 0.1,
+    box = 7.5,
+    cls = 1.0,
+#    min_area = 0.002,
+    kobj = 1.2,
+    dfl = 1.5,
+    #fl_ga = 0.0,
+    label_smoothing = 0.0,
+    #nbs = 64,
+    hsv_h = 0.03,
+    hsv_s = 1.0,
+    hsv_v = 0.7,
+    degrees = 10.0,
+    translate = 0.25,
+    scale = 0.6,
+    shear = 5.0,
+    perspective = 0.001,
+    flipud = 0.1,
+    fliplr = 0.5,
+    mosaic = 1.0,
+    mixup = 0.2,
+    copy_paste = 0.2,
+    close_mosaic = 15,
+    amp = True
+#    loss_type='Varifocal'
+)
