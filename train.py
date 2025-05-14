@@ -23,11 +23,11 @@ model.train(
     dfl = 1.5,
     kobj = 1.5,  # 加强目标存在性学习
     hsv_h = 0.3,  # 增强色调扰动
-    hsv_s = 1.5,  # 提高饱和度扰动
+    hsv_s = 0.9,  # 提高饱和度扰动
     hsv_v = 0.9,
     degrees = 15.0,  # 增加旋转角度
     shear = 8.0,  # 加强剪切形变
-    perspective = 0.003,
+    perspective = 0.001,
     mixup = 0.3,  # 增强混合增强
     copy_paste = 0.3,  # 提高复制粘贴概率
     close_mosaic = 30,  # 延后关闭马赛克
