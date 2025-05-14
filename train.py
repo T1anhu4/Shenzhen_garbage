@@ -6,7 +6,7 @@ model.train(
     data = '/home/zhy/wth/wth3/YOLODataset/dataset.yaml',
     epochs = 300,
     imgsz = (1536, 864),  # 增大分辨率
-    batch = 4,  # 因分辨率增大适当降低batch
+    batch = 6,  # 因分辨率增大适当降低batch
     workers = 6,
     device = 0,
     optimizer = 'AdamW',
