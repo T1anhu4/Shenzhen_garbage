@@ -32,6 +32,5 @@ model.train(
     copy_paste = 0.3,  # 提高复制粘贴概率
     close_mosaic = 30,  # 延后关闭马赛克
     label_smoothing = 0.1,  # 引入标签平滑
-    amp = True,
-    loss_type='Varifocal'  # 启用变焦损失
+    amp = True
 )
